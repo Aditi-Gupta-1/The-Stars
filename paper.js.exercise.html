@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shapes</title>
+	<script type="text/javascript" src="paper-full.js"></script>
+    <script type="text/paperscript" canvas="myCanvas">
+        for(var x = 0; x < 1500; x+=100){
+            for(var y = 0; y < 1000; y+=100){
+               var decagon = new Path.RegularPolygon(new Point(x, y), 10, 10);
+               decagon.fillColor = '#e9e9ff';
+               decagon.selected = true;
+            }
+        }
+    </script>
+    <style type="text/css">
+    	body,html{
+    		height: 100%;
+    		margin: 0;
+    	}
+    	canvas{
+    		width: 100%;
+    		background-color: black;
+    	}
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" resize></canvas>
+</body>
+</html>
